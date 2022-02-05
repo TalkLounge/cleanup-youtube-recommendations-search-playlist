@@ -1,12 +1,14 @@
 // ==UserScript==
-// @name         Cleanup YouTube Search
-// @version      1.0.1
-// @description  Deletes "Users have also seen", "For you" and "Similar searches" Sections from Youtube Search Results
-// @author       TalkLounge (https://github.com/TalkLounge)
-// @namespace    https://github.com/TalkLounge/cleanup-youtube-search
-// @license      MIT
-// @match        https://www.youtube.com*
-// @grant        none
+// @name            Cleanup YouTube Search
+// @name:de         YouTube Suche bereinigen
+// @version         1.0.2
+// @description     Deletes "Users have also seen", "For you" and "Similar searches" Sections from Youtube Search Results
+// @description:de  Entfernt die Abschnitte "Nutzer haben auch gesehen", "Für mich" und "Ähnliche Suchanfragen" aus den Youtube-Suchergebnissen
+// @author          TalkLounge (https://github.com/TalkLounge)
+// @namespace       https://github.com/TalkLounge/cleanup-youtube-search
+// @license         MIT
+// @match           https://www.youtube.com/*
+// @grant           none
 // ==/UserScript==
 
 (function () {
