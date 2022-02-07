@@ -7,7 +7,7 @@
 // @author          TalkLounge (https://github.com/TalkLounge)
 // @namespace       https://github.com/TalkLounge/cleanup-youtube-search
 // @license         MIT
-// @match           https://www.youtube.com/*
+// @match           https://www.youtube.com/results?search_query*
 // @grant           none
 // ==/UserScript==
 
@@ -15,9 +15,6 @@
     'use strict';
 
     function cleanup() {
-        if (! window.location.href.startsWith("https://www.youtube.com/results")) {
-            return;
-        }
 
         var shelfs = document.getElementsByTagName("ytd-shelf-renderer");
         for (var i = 0; i < shelfs.length; i++) {
@@ -25,7 +22,7 @@
         }
 
         shelfs = document.getElementsByTagName("ytd-horizontal-card-list-renderer");
-        for (var i = 0; i < shelfs.length; i++) {
+        for (i = 0; i < shelfs.length; i++) {
             shelfs[i].remove();
         }
     }
