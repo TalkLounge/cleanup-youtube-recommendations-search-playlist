@@ -7,7 +7,7 @@
 // @author          TalkLounge (https://github.com/TalkLounge)
 // @namespace       https://github.com/TalkLounge/cleanup-youtube-search
 // @license         MIT
-// @match           https://www.youtube.com/*
+// @match           https://www.youtube.com/results?search_query*
 // @grant           none
 // ==/UserScript==
 
@@ -25,7 +25,7 @@
         }
 
         shelfs = document.getElementsByTagName("ytd-horizontal-card-list-renderer");
-        for (var i = 0; i < shelfs.length; i++) {
+        for (i = 0; i < shelfs.length; i++) {
             shelfs[i].remove();
         }
     }
