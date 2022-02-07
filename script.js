@@ -7,7 +7,7 @@
 // @author          TalkLounge (https://github.com/TalkLounge)
 // @namespace       https://github.com/TalkLounge/cleanup-youtube-search
 // @license         MIT
-// @match           https://www.youtube.com/results?search_query*
+// @match           https://www.youtube.com/results?search_query=*
 // @grant           none
 // ==/UserScript==
 
