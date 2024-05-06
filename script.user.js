@@ -26,6 +26,7 @@
         if (window.location.href.startsWith("https://www.youtube.com/results")) {
             [...document.querySelectorAll("ytd-shelf-renderer")].forEach(item => item.remove()); // Sections: People also watched, For you, Previously watched, From related searches, Latest from, Popular videos from today, New channels for you
             [...document.querySelectorAll("ytd-horizontal-card-list-renderer")].forEach(item => item.remove()); // Section: People also search for
+            [...document.querySelectorAll("ytd-reel-shelf-renderer")].forEach(item => item.remove()); // Section: shorts 
         }
 
         if (window.location.href.startsWith("https://www.youtube.com/@") && (!window.location.pathname.substr(2).includes("/") || window.location.pathname.endsWith("/featured"))) {
