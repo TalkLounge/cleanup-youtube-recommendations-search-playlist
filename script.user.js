@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Cleanup YouTube Recommendations in Search and Playlist
 // @name:de         Bereinige YouTube Empfehlungen in der Suche und bei Playlisten
-// @version         1.1.7
+// @version         1.1.8
 // @description     Deletes "People also watched", "For you", "Previously watched", "From related searches", "Latest from", "Popular videos from today", "New channels for you", "People also search for", "Shorts", "Latest Shorts from", "Recommended playlists" and "Recommended videos" Sections from Search Results, Playlists and Channels on YouTube
 // @description:de  Entfernt die Abschnitte "Nutzer haben auch gesehen", "Für mich", "Schon angesehen", "Aus ähnlichen Suchanfragen", "Neueste Videos von", "Beliebte Videos von heute", "Neue Kanäle für dich", "Ähnliche Suchanfragen", "Shorts", "Neueste Shorts von", "Empfohlene Playlists" und "Empfohlene Videos" aus den Suchergebnissen, Playlisten und Kanälen auf YouTube
 // @icon            https://www.google.com/s2/favicons?domain=youtube.com
@@ -26,7 +26,8 @@
         if (window.location.href.startsWith("https://www.youtube.com/results")) {
             [...document.querySelectorAll("ytd-shelf-renderer")].forEach(item => item.remove()); // Sections: People also watched, For you, Previously watched, From related searches, Latest from, Popular videos from today, New channels for you
             [...document.querySelectorAll("ytd-horizontal-card-list-renderer")].forEach(item => item.remove()); // Section: People also search for
-            [...document.querySelectorAll("ytd-reel-shelf-renderer")].forEach(item => item.remove()); // Sections: Shorts, Latest Shorts from
+            [...document.querySelectorAll("ytd-reel-shelf-renderer")].forEach(item => item.remove()); // [Legacy] Sections: Shorts, Latest Shorts from
+            [...document.querySelectorAll("grid-shelf-view-model")].forEach(item => item.remove()); // Sections: Shorts, Latest Shorts from
         }
 
         if (window.location.href.startsWith("https://www.youtube.com/@") && (!window.location.pathname.substr(2).includes("/") || window.location.pathname.endsWith("/featured"))) {
